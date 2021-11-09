@@ -1,0 +1,51 @@
+<h1>{{pageTitle}}</h1>
+<p [style.color]="myparacolour">This page provides details anout the products!</p>
+<table>
+    <tr *ngFor="let item of nos">
+        <td>{{item}}</td>
+    </tr>
+</table>
+<hr/>
+<table [class.blue]="Applycss" [class]="myredborderclass">
+    <tr>
+        <td>ProductID</td>
+        <td>ProductNaem</td> 
+        <td>Price</td> 
+    </tr> 
+    <tr *ngFor="let pdata of products"> 
+        <td>{{pdata.id}}</td> 
+        <td>{{pdata.name}}</td> 
+        <td>{{pdata.price}}</td> 
+    </tr> 
+</table>
+<hr/>
+<table [class.red]="Applycss">
+    <tr>
+    <td>Pid</td>
+    <td>pname</td>
+    <td>price</td>
+</tr>
+<tr *ngFor="let pdata of plist">
+<td>{{pdata.prodid}}</td>
+<td>{{pdata.prodname}}</td>
+<td>{{pdata.prodprice}}</td>
+</tr>
+</table>
+<hr/>
+<form>
+    <fieldset>
+        <label>Enter Product id</label>
+        <input type="number" id="prodid" [(ngModel)]="Pid" name="prodid"/>
+        <br/>
+        <label>Enter Product name</label>
+        <input type="text" id="prodname" [(ngModel)]="Pname" name="prodname"/>
+        <br/>
+        <label>Enter Product price</label>
+        <input type="number" id="prodprice" [(ngModel)]="Pprice" name="prodprice"/>
+        <br/>
+        <label>Enter Product quantity</label>
+        <input type="number" id="prodquantity" [(ngModel)]="quantity" name="prodquantity"/>
+        <br/>
+        <input type="submit" value="Save" (click)="Save($event)"/>
+    </fieldset>
+</form>

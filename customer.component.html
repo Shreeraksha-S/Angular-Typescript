@@ -1,0 +1,29 @@
+<p>customer works!</p>
+<table>
+    <tr>
+        <td>Customer ID</td>
+        <td>Customer Name</td>
+        <td>Customer City</td>
+    </tr>
+    <tr *ngFor="let data of customer">
+        <td>{{data.custid}}</td>
+        <td>{{data.custname}}</td>
+        <td>{{data.custcity}}</td>
+    </tr>
+   
+</table>
+<form>
+<fieldset>
+    <label>Enter Customer ID</label>
+    <input type="number" [(ngModel)]="cid" id="custid" name="custid"/>
+    <br/>
+    <label>Enter Name </label>
+    <input type="text" [class]="myredborderclass" [(ngModel)]="cname" id="custname" name="custname"/>
+    <br/>
+    <label>enter City</label>
+    <input type="text" [class]="mygreenborderclass" [(ngModel)]="ccity" id="custcity" name="custcity" />
+    <br/>
+    <input type="submit" value="Save" (click)="Save($event)"/>
+</fieldset>
+</form>
+

@@ -1,0 +1,24 @@
+<p>customer-order works!</p>
+<h1>Order details</h1>
+<form>
+    <label>Order ID</label>
+    <input type="number" [(ngModel)]="odetails.orderid"  id="oid" name="oid"/>
+    <br/>
+    <label>Product ID</label>
+    <input type="number" [(ngModel)]="odetails.prodid" id="pid" name="pid"/>
+    <br/>
+    <label>Price</label>
+    <input type="number"[(ngModel)]="odetails.price"  id="ppPrice" name="ppPrice"/>
+    <br/>
+    <label>Quantity</label>
+    <input type="number"[(ngModel)]="odetails.quantity"  id="ppQuantity" name="ppQuantity"/>
+    <br/>
+    <input type="submit" value="Save" (click)="Save($event)"/>
+</form>
+<div>
+    <div>Orer ID:{{odetails.orderid}}</div>
+    <div>Product ID:{{odetails.prodid}}</div>
+    <div>Price:{{odetails.price}}</div>
+    <div>Quantity{{odetails.quantity}}</div>
+<div>Amount:{{odetails.price*odetails.quantity}}</div>
+</div>
