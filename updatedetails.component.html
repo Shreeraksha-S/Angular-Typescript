@@ -1,0 +1,36 @@
+<form  #loginfrm="ngForm" class="form-group" (ngSubmit)=" updateemp(loginfrm.value)"  >
+    <fieldset>
+        <label>Enter Employee Id</label>
+       <input type="number" [(ngModel)]="adde.EmployeeID" id="" name="EmployeeID"/>
+       <br/>
+       <label>Enter Employee Status</label>
+       <input type="text" [(ngModel)]="adde.EmpStatus" id="" name="EmpStatus"/>
+       <br/>
+       <label for="designation">Enter Designation</label>
+       <select name="Designation" id="" [(ngModel)]="adde.Designation" >
+        <option value="Analyst">Analyst</option>
+        <option value="WebDeveloper">Web Developer</option>
+        <option value="DataScientist">Data Scientist</option>
+       </select>
+       <br/>
+       <label>Enter Departmant No.</label>
+       <input type="number" [(ngModel)]="adde.DeptNo" id="" name="DeptNo"/>
+       <br/>
+       <label>Enter Address</label>
+       <input type="textbox" [(ngModel)]="adde.Address" id="" name="Address"/>
+       <br/>
+     
+       <label>Enter Phone No.</label>
+       <input type="number" [(ngModel)]="adde.PhoneNo" id="" name="PhoneNo"/>
+       <br/>
+       <label>Enter Work Location</label>
+       <input type="text" [(ngModel)]="adde.WorkLocation" id="" name="WorkLocation"/>
+       <br/>
+      
+       <label>Enter Manager ID</label>
+       <input type="number" [(ngModel)]="adde.ManagerId" id="" name="ManagerId"/>
+       <button (click)="passid(adde.EmployeeID)"class="btn btn-primary" name="vut"> Get Details</button>
+
+       <input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+    </form>
